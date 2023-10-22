@@ -2139,7 +2139,7 @@ local function CheckDistance(Instance)
 	return Pass, Distance;
 end
 
-local function UpdatePlayerData()
+pcall(function() UpdatePlayerData()
 	if (tick() - LastRefresh) > (Options.RefreshRate.Value / 1000) then
 		LastRefresh = tick();
 		if CustomESP and Options.Enabled.Value then
@@ -2454,7 +2454,7 @@ local function UpdatePlayerData()
 			shared.InstanceData[v.Name] = Data;
 		end
 	end
-end
+end)
 
 local LastInvalidCheck = 0;
 
