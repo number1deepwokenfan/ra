@@ -2089,7 +2089,7 @@ if CustomTeam ~= nil then
 	CheckTeam = CustomTeam.CheckTeam;
 end
 
-local function CheckPlayer(Player, Character)
+pcall(function() CheckPlayer(Player, Character)
 	if not Options.Enabled.Value then return false end
 
 	local Pass = true;
@@ -2116,7 +2116,7 @@ local function CheckPlayer(Player, Character)
 	end
 
 	return Pass, Distance;
-end
+end)
 
 local function CheckDistance(Instance)
 	if not Options.Enabled.Value then return false end
