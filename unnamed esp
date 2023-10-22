@@ -1,3 +1,4 @@
+pcall(function() 
 assert(Drawing, 'exploit not supported')
 
 if not cloneref then cloneref = function(o) return o end end
@@ -2584,3 +2585,7 @@ RunService:UnbindFromRenderStep(UpdateName);
 
 RunService:BindToRenderStep(GetDataName, 300, UpdatePlayerData);
 RunService:BindToRenderStep(UpdateName, 199, Update);
+
+
+
+end)
